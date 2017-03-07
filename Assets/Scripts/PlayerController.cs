@@ -38,4 +38,14 @@ public class PlayerController : MonoBehaviour {
         }
 
     }
+
+    private void OnCollisionEnter(Collision outro)
+    {
+        if (outro.gameObject.tag == "obstaculo")
+        {
+            rb.AddForce(new Vector3(-50f,))
+
+        }
+
+    }
 }
