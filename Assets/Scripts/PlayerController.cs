@@ -43,7 +43,9 @@ public class PlayerController : MonoBehaviour {
     {
         if (outro.gameObject.tag == "obstaculo")
         {
-            rb.AddForce(new Vector3(-50f,))
+            rb.AddForce(new Vector3(-50f, 20f, 0f), ForceMode.Impulse);
+            rb.detectCollisions = false;
+            anim.Play("morrendo");
 
         }
 
