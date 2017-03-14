@@ -62,8 +62,11 @@ public class PlayerController : MonoBehaviour {
      void OnCollisionEnter(Collision outro)
     {
         if (GameController.instancia.estado == Estado.Jogando) {
-            if (outro.gameObject.tag == "obstaculo")
+            Debug.Log("colidiu");
+            if (outro.gameObject.tag == "Obstaculo")
             {
+                Debug.Log("obstaculo");
+                rb.velocity = Vector3.zero;
                 rb.AddForce(new Vector3(-50f, 20f, 0f), ForceMode.Impulse);
                 rb.detectCollisions = false;
                 anim.Play("morrendo");

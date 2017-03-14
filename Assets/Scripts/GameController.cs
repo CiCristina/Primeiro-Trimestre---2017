@@ -41,11 +41,11 @@ public class GameController : MonoBehaviour {
             GameObject obj = Instantiate(obstaculo, pos, Quaternion.identity) as GameObject;
             Destroy(obj, tempoDestruicao);
             yield return new WaitForSeconds(espera);
-
+                
         }
     }
 	
-		public void PlayerComecou()
+	public void PlayerComecou()
     {
         estado = Estado.Jogando;
         StartCoroutine(GerarObstaculos());
